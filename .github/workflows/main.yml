@@ -30,8 +30,11 @@ jobs:
 
       # Runs a set of commands using the runners shell
     - name: Run a multi-line script
+      with:
+        mySha: ${{ github.sha }}
+        awsKey: ${{ secrets.AWS_ACCESS_KEY_ID }}
       run: |
-        {{ github.sha
-        {{ secrets.AWS_ACCESS_KEY_ID }}
+        echo "$mySha"
+        echo "$awskey"
         echo ,
         echo test, and deploy your project.
