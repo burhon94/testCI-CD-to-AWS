@@ -9,6 +9,7 @@ jobs:
     name: Run a multi-line script
     runs-on: ubuntu-latest
     steps:
+      - shell: bash
         env:
           SUPER_SECRET: ${{ secrets.SuperSecret }}
         run: |
