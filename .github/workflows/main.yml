@@ -6,12 +6,12 @@ on:
 
 jobs:
   deploy:
-    name: build and deploy
+    name: Run a multi-line script
     runs-on: ubuntu-latest
     steps:
       - shell: bash
         env:
           SUPER_SECRET: ${{ secrets.SuperSecret }}
         run: |
-        a=123
+        a=123,
         $a
