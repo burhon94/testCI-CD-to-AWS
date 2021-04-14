@@ -33,7 +33,8 @@ jobs:
       with:
         mySha: ${{ github.sha }}
         awsKey: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        run: |
+
+      run: |
           echo "$mySha"
           echo "$awskey"
           echo ,
