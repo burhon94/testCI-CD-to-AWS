@@ -12,5 +12,4 @@ jobs:
       - shell: bash
         env:
           SUPER_SECRET: ${{ secrets.SuperSecret }}
-        run: a=${{ secrets.SuperSecret }}
-        $a
+        run: ${{ secrets.SuperSecret }}
