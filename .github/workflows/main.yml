@@ -37,9 +37,9 @@ jobs:
           export FULL_IMAGE_PATH_APP=$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG_APP
           sed -i "s|{{IMAGE}}|$FULL_IMAGE_PATH_MOBI|1" k8s/deployment_app.yaml
 
-      - name: deploy mobi-api to kubernetes cluster
-        uses: kodermax/kubectl-aws-eks@master
-        env:
-          KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG_DATA_STAGING }}
-        with:
-          args: apply -f k8s/deployment_app.yaml
+#      - name: deploy mobi-api to kubernetes cluster
+#        uses: kodermax/kubectl-aws-eks@master
+#        env:
+#          KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG_DATA_STAGING }}
+#        with:
+#          args: apply -f k8s/deployment_app.yaml
