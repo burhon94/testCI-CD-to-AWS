@@ -30,6 +30,7 @@ jobs:
 #          ECR_REPOSITORY: my-ecr-repo
 #          IMAGE_TAG: ${{ github.sha }}
         run: |
+          ${{ secrets.AWS_ACCESS_KEY_ID }}
           echo 321
           a=${{ secrets.AWS_ACCESS_KEY_ID }}
           $a
