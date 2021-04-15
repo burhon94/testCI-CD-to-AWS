@@ -30,6 +30,7 @@ jobs:
 #          ECR_REPOSITORY: my-ecr-repo
 #          IMAGE_TAG: ${{ github.sha }}
         run: |
+          echo 321
           ${{ secrets.AWS_ACCESS_KEY_ID }}
 
 #          # Build a docker container and
