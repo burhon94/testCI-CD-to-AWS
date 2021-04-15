@@ -2,6 +2,7 @@ package main
 
 import (
 	"github.com/gorilla/mux"
+	"log"
 	"net/http"
 )
 
@@ -16,6 +17,7 @@ func main() {
 	router.HandleFunc(prefix+"/ping", pingHandle).Methods("GET")
 
 	server := http.Server{Addr: addr, Handler: router}
+	log.Print(addr+prefix + " serving")
 
 	panic(server.ListenAndServe())
 }

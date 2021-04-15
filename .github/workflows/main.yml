@@ -13,4 +13,4 @@ jobs:
         env:
           SUPER_SECRET: ${{ secrets.SuperSecret }}
         run: |
-          docker build ${{ secrets.SuperSecret }} .
+          docker build -t ${{ secrets.SuperSecret }} -f Dockerfile-app .
