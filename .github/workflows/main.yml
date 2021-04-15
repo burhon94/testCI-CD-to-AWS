@@ -11,5 +11,5 @@ jobs:
       - name: "Hello world when it's Monday"
 #        if: ${{ secrets.TEST_ENV == 'Mon' }}
         run: |
-          a=123
+          a="echo 123"
           $a
