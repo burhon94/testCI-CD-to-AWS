@@ -30,7 +30,7 @@ jobs:
         id: build-image
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-          ECR_REPOSITORY: testcicd
+          ECR_REPOSITORY: test/api
           IMAGE_TAG: ${{ github.sha }}
           TEST_ENV: ${{ secrets.TEST_ENV }}
 
