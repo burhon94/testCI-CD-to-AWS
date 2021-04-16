@@ -35,8 +35,9 @@ jobs:
           TEST_ENV: ${{ secrets.TEST_ENV }}
 
         run: |
+          echo $ECR_REGISTRY
           echo "---"
-          a=${{ ECR_REGISTRY }}
+          a=${{ secrets.TEST_ENV }}
           $a
           docker build -t ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG -f Dockerfile-app .
           docker push 769359763684/$ECR_REPOSITORY:$IMAGE_TAG
