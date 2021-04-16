@@ -13,10 +13,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: "Hello world when it's Monday"
-        env: 
-          TEST_ENV: ${{ secrets.TEST_ENV }}
-
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -34,6 +30,7 @@ jobs:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
           ECR_REPOSITORY: my-ecr-repo
           IMAGE_TAG: ${{ github.sha }}
+          TEST_ENV: ${{ secrets.TEST_ENV }}
 
         run: |
           echo "---"
