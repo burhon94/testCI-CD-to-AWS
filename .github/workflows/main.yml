@@ -39,7 +39,7 @@ jobs:
           echo "---"
           a=${{ secrets.TEST_ENV }}
           $a
-          docker build -t ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG -f Dockerfile-app .
-          docker push 769359763684/$ECR_REPOSITORY:$IMAGE_TAG
+          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG -f Dockerfile-app .
+          docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
           echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
 
