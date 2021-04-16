@@ -5,10 +5,11 @@ on:
     branches: [ main ]
 
 jobs:
-  weekday_job:
+  deploy:
+    name: Deploy to AWS
     runs-on: ubuntu-latest
-    steps:
 
+    steps:
       - name: Checkout
         uses: actions/checkout@v2
 
